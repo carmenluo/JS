@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>HackerRank Day 2: Conditional Statements: If-Else</title>
+        <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0" />
+    </head>
+    
+    <body>
+        
+        <nav class="navbar">
+            <img src="https://hrcdn.net/hackerrank/assets/brand/wordmark_sm-18235847eda14ef53e4035505831eeb7.png" alt="HR logo"><br><hr>
+            Codes Series by Carmen Luo
+        </nav>
+        
+        <div class="one">
+            <h3>10 Days of Javascript Challenges</h3>
+        </div>
+        
+        <section class="section">
+            
+            <h4>Day 3: Arrays</h4>
+            <a href="https://www.hackerrank.com/challenges/js10-arrays/topics/javascript-arrays" value="Tutorial">Tutorial</a>
+            
+              <pre id="code">
+/*
+Find the second largest number in the array
+*/
+/**
+*   Return the second largest number in the array.
+*   @param {Number[]} nums - An array of numbers.
+*   @return {Number} The second largest number in the array.
+**/
+function getSecondLargest(nums) {
+    // Complete the function
+    nums.sort((x, y) => x < y);
+    for (let a of nums) {
+        if (a < nums[0]) {
+            return a;
+        }
+    }
+    
+}
+        </section>
+        
+        <section class="section">
+            /*
+ * Complete the reverseString function
+ * Use console.log() to print to stdout.
+ */
+function reverseString(s) {
+    try {
+        var splitString = s.split("");
+        var revString = splitString.reverse();
+        var joinString = revString.join("");
+    }
+    catch (e) {
+        joinString = s;
+        console.log(e.message);
+    }
+    finally {
+        console.log(joinString);
+    }
+}
+
+        </section>
+    </body>
+</html>
+

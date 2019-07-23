@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>HackerRank Day 2: Conditional Statements: If-Else</title>
+        <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0" />
+    </head>
+    
+    <body>
+        
+        <nav class="navbar">
+            <img src="https://hrcdn.net/hackerrank/assets/brand/wordmark_sm-18235847eda14ef53e4035505831eeb7.png" alt="HR logo"><br><hr>
+            Codes Series by Carmen Luo
+        </nav>
+        
+        <div class="one">
+            <h3>10 Days of Javascript Challenges</h3>
+        </div>
+        
+        <section class="section">
+            
+            <h4>Day 2: Conditional Statements: If-Else</h4>
+            
+              <pre id="code">
+/*
+Complete the getGrade(score) function in the editor. It has one parameter: an integer, score , denoting the number of points Julia earned on an exam. It must return the letter corresponding to her grade according to the following rules:
+
+If 25 < score ≤ 30, then grade = A.
+If 20 < score ≤ 25, then grade = B.
+If 15 < score ≤ 20, then grade = C.
+If 10 < score ≤ 15, then grade = D.
+If 5 < score ≤ 10, then grade = E.
+If 0 ≤ score ≤ 5, then grade = F.
+*/
+function getGrade(score) {
+    let grade;
+    // Write your code here
+    if (score > 25) {
+        return "A";
+    }
+    else if (score > 20) {
+        return "B";
+    }
+    else if (score > 15) {
+        return "C";
+    }
+    else if (score > 10) {
+        return "D";
+    }
+    else if (score > 5) {
+        return "E";
+    }
+    else {
+        return "F";
+    }
+}
+              </pre>
+              
+                <h6>Keep Going!</h6>
+                
+        </section>
+        <section>
+            /*
+* If the first character in string s is in the set {a,e,i,o,u}, then return A.
+* If the first character in string s is in the set {b,c,d,f,g}, then return B.
+* If the first character in string s is in the set {h,j,k,l,m}, then return C.
+* If the first character in string s is in the set {n,p,q,r,s,t,v,w,x,y,x}, then return D.
+*/
+function getLetter(s) {
+    let letter;
+    // Write your code here
+    switch (s[0]) {
+        case "a":
+        case "e":
+        case "i":
+        case "o":
+        case "u":
+            return "A"
+            break;
+        case "b":
+        case "c":
+        case "d":
+        case "f":
+        case "g":
+            return "B";
+            break;
+        case "h":
+        case "j":
+        case "k":
+        case "l":
+        case "m":
+            return "C";
+            break;
+        default:
+            return "D";
+    }
+    return letter;
+}
+
+            */
+        </section>
+        
+    </body>
+</html>
+
