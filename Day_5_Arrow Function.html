@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>HackerRank Day 5: Arrow Function</title>
+        <style>
+        p.groove{border-style: groove;}
+        </style>
+        <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0" />
+    </head>
+    
+    <body>
+        
+        <nav class="navbar">
+            <img src="https://hrcdn.net/hackerrank/assets/brand/wordmark_sm-18235847eda14ef53e4035505831eeb7.png" alt="HR logo"><br><hr>
+            Codes Series by Carmen Luo
+        </nav>
+        
+        <div class="one">
+            <h3>10 Days of Javascript Challenges</h3>
+        </div>
+        
+        <section class="section">
+
+              <pre id="code">
+Day 5: Arrow Functions
+<div style="border-style: groove; background-color: grey">A Basic Reduction
+Use it when: You have an array of amounts and you want to add them all up.
+
+const euros = [29.76, 41.85, 46.5];
+
+const sum = euros.reduce((total, amount) => total + amount); 
+
+sum // 118.11
+How to use it:
+<ul>
+<li>In this example, Reduce accepts two parameters, the total and the current amount.</li>
+<li>The reduce method cycles through each number in the array much like it would in a for-loop.</li>
+<li>When the loop starts the total value is the number on the far left (29.76) and the current amount is the one next to it (41.85).</li>
+<li>In this particular example, we want to add the current amount to the total.</li>
+<li>The calculation is repeated for each amount in the array, but each time the current value changes to the next number in the array, moving right.</li>
+<li>When there are no more numbers left in the array the method returns the total value.</li>
+</ul></div>
+const arr = [1, 2, 3, 4, 5];
+
+const sum = arr.reduce(function (a, b) {
+    return a + b;
+}, 0);
+<p style="font-weight: bold;font-size: 13px"> is the same as:</p>
+const arr = [1, 2, 3, 4, 5];
+
+const sum = arr.reduce(function (a, b) {
+    return a + b;
+});
+<p style="font-weight: bold;font-size: 13px"> and the same as:</p>
+const sum = arr.reduce((a, b)=>a+b,0);
+<p style="font-weight: boldfont-size: 13px">or</p>
+const sum = arr.reduce((a,b)=> { return a+b},0);
+<p style="font-weight: bold;font-size: 15px">****************************************************Even Number *2, odd numbers *3**********************************************************************************</p>
+
+<p class="groove">
+*Method 1:
+    function modifyArray(nums) {
+    var something = function (n) {
+        if (n % 2==0) {
+            return n * 2;
+        }
+        else { return n * 3; }
+        
+    }
+    var result = nums.map(something);
+    return result;
+    
+}
+</p>
+<p class="groove">
+*Method 2:
+    function modifyArray(nums) {
+    var something = function (n) {
+       var a=(n%2==0)?n*2:n*3;
+       return a;
+        
+    }
+    var result = nums.map(something);
+    return result;
+    
+}
+<p class="groove">
+*Method 3:
+function modifyArray(nums) {
+    var something = n => { return (n % 2 == 0) ? n * 2 : n * 3 };
+    var result = nums.map(something);
+    return result;
+
+}
+</p>
+<p class="groove">
+*Method 4:
+function modifyArray(nums) {
+    var something = n => n=(n % 2 == 0) ? n * 2 : n * 3 ;   
+    var result = nums.map(something);
+    return result;
+    
+}
+</p>
+<p class="groove">
+*Method 5:
+function modifyArray(nums) {
+    return nums.map(n => n= (n % 2 == 0) ? n * 2 : n * 3) ;
+}
+</p>
+
+        </section>
+    </body>
+</html>
+
