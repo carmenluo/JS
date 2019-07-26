@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>HackerRank Day 2: Conditional Statements: If-Else</title>
+        <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0" />
+    </head>
+    
+    <body>
+        
+        <nav class="navbar">
+            <img src="https://hrcdn.net/hackerrank/assets/brand/wordmark_sm-18235847eda14ef53e4035505831eeb7.png" alt="HR logo"><br><hr>
+            Codes Series by Carmen Luo
+        </nav>
+        
+        <div class="one">
+            <h3>10 Days of Javascript Challenges</h3>
+        </div>
+        
+        <section class="section">
+            
+            <h4>Day 4: Iterate Objects</h4>
+            <a href="https://www.hackerrank.com/challenges/js10-arrays/topics/javascript-arrays" value="Tutorial">Tutorial</a>
+            
+              <pre id="code">
+Day 5: Template Literals
+'use strict';
+
+process.stdin.resume();
+process.stdin.setEncoding('utf-8');
+
+let inputString = '';
+let currentLine = 0;
+
+process.stdin.on('data', inputStdin => {
+    inputString += inputStdin;
+});
+
+process.stdin.on('end', _ => {
+    inputString = inputString.trim().split('\n').map(string => {
+        return string.trim();
+    });
+    
+    main();    
+});
+
+function readLine() {
+    return inputString[currentLine++];
+}
+
+/*
+ * Determine the original side lengths and return an array:
+ * - The first element is the length of the shorter side
+ * - The second element is the length of the longer side
+ * 
+ * Parameter(s):
+ * literals: The tagged template literal's array of strings.
+ * expressions: The tagged template literal's array of expression values (i.e., [area, perimeter]).
+ */
+function sides(literals, ...expressions) {
+    let s1 = (expressions[1] + Math.sqrt(expressions[1] * expressions[1] - 16 * expressions[0])) / 4;
+    let s2 = (expressions[1] - Math.sqrt(expressions[1] * expressions[1] - 16 * expressions[0])) / 4;
+    var array = [s1, s2];
+    array = array.sort();
+    return array;
+}
+
+
+function main() {
+    let s1 = +(readLine());
+    let s2 = +(readLine());
+    
+    [s1, s2] = [s1, s2].sort();
+    
+    const [x, y] = sides`The area is: ${s1 * s2}.\nThe perimeter is: ${2 * (s1 + s2)}.`;
+    
+    console.log((s1 === x) ? s1 : -1);
+    console.log((s2 === y) ? s2 : -1);
+}
+        </section>
+    </body>
+</html>
+
