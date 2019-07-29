@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>HackerRank Day 6:JavaStripts Dates</title>
+        <style>
+        p.groove{border-style: groove;}
+        </style>
+        <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0" />
+    </head>
+    
+    <body>
+        
+        <nav class="navbar">
+            <img src="https://hrcdn.net/hackerrank/assets/brand/wordmark_sm-18235847eda14ef53e4035505831eeb7.png" alt="HR logo"><br><hr>
+            Codes Series by Carmen Luo
+        </nav>
+        
+        <div class="one">
+            <h3>10 Days of Javascript Challenges</h3>
+        </div>
+        
+        <section class="section">
+
+              <pre id="code">
+Day 6: JavaStripts Dates
+// The days of the week are: "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
+function getDayName(dateString) {
+    let dayName;
+    // Write your code here
+    
+    var day_names = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+    var date = new Date(dateString);
+    
+    dayName = day_names[date.getDay()];
+    
+    return dayName;
+}
+
+        </section>
+    </body>
+</html>
+
